@@ -1,0 +1,199 @@
+:root {
+    --input-height: 50px;
+    --icon-padding: 20px;
+
+    --footer-padding: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+nav {
+    height: 70px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    padding: 2vw;
+    font-size: small;
+}
+
+nav > * {
+    margin: 5px;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+nav img {
+    height: 5vh;
+    width: 5vh;
+}
+
+form {
+    width: 50vw;
+}
+
+.main-logo {
+    width: 100%;
+    padding: 0 20% 5vh;
+}
+
+.search-input input {
+    width: 100%;
+    height: var(--input-height);
+    border-radius: calc(var(--input-height) / 2);
+    padding: 0 var(--input-height);
+    font-size: 16px;
+}
+
+.search-input {
+    position: relative;
+}
+
+.search-input input:focus,
+.search-input input:hover {
+    outline: none;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.icon {
+    position: absolute;
+    top: 25%;
+    opacity: 0.35;
+}
+
+.mic-icon {
+    right: var(--icon-padding);
+}
+
+.search-icon {
+    left: var(--icon-padding);
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons button {
+    color: #3c4043;
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    margin: 5vh 1vh 0;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.buttons button:hover {
+    border: 1px solid #ddd;
+    cursor: pointer;
+    box-shadow: 0 0.5px 3px rgba(0, 0, 0, 0.05);
+}
+
+form p {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+/* DARI AWAL INI SAMPAI AKHIR ADALAH TAMBAHAN */
+.search-input input{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 200ms ease;
+}
+
+.buttons button:hover {
+    box-shadow: 0 0.5px 1px rgb(0 0 0 / 10%);
+}
+
+@keyframes input-gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.search-input input:focus {
+    background: linear-gradient(30deg, #4285f4, #4285f4, #eb473a, #fbbc05, #4285f4, #34a853, #ea4638, #ea4638);
+	background-size: 2000% 2000%;
+	animation: input-gradient 15s ease infinite;
+    box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+    color: white;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #70757a;
+    background-color: #f2f2f2;
+}
+
+footer > * {
+    padding: 0 20px;
+}
+
+footer>.ackn {
+    border-bottom: 1px solid #dadce0;
+}
+
+footer>.foot {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer a, footer p {
+    padding: var(--footer-padding);
+    display: inline-block;
+    font-size: 0.7rem;
+}
+
+footer a:visited {
+    color: #70757a;
+}
+
+@media only screen and (max-width: 768px){
+    footer .foot {
+        display: none;
+    }
+    footer .ackn {
+        font-size: 0.8rem;
+    }
+    form {
+        width: 70vw;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .main-logo {
+        padding: 0 10% 5vh;
+    }
+    form {
+        width: 90vw;
+    }
+}

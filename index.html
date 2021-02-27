@@ -1,0 +1,57 @@
+<!--
+  Nama: Amar Fadil
+  NIM: 16520008
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARC Search</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <a href="https://mail.google.com">Gmail</a>
+        <a href="https://www.google.com/imghp">Image</a>
+        <img src="./assets/bussiness-man.png" alt="profile-thumbnail" />
+    </nav>
+    <form action="https://google.com/search">
+        <img src="./assets/arc-search-logo.webp" alt="main-logo" class="main-logo" />
+        <div class="search-input">
+            <input type="text" name="q">
+            <div id="input-bg-light"></div>
+            <img src="./assets/icons/search-24px.svg" alt="search-icon" class="search-icon icon" />
+            <img src="./assets/icons/mic-24px.svg" alt="mic-icon" class="mic-icon icon" />
+        </div>
+        <div class="buttons">
+            <!-- TAMBAHAN DILUAR HANDS-ON (oclick untuk setiap button dan input untuk I'm Feeling Lucky) -->
+            <button onclick="document.getElementById('ifl-hidden').setAttribute('name','')" type="submit">Google Search</button>
+            <button onclick="document.getElementById('ifl-hidden').setAttribute('name','btnI')" type="submit">I'm Feeling Lucky</button>
+            <input id="ifl-hidden" type="hidden" name="btnI" value="I'm Feeling Lucky">
+            <!-- END TAMBAHAN -->
+        </div>
+        <p>ARC offered in: <a href="https://arc.itb.ac.id">Institut Teknologi Bandung</a></p>
+    </form>
+    <!-- TAMBAHAN -->
+    <footer>
+        <div class="ackn">
+            <p>ARC Search is powered by Google Search</p>
+        </div>
+        <div class="foot">
+            <div>
+                <a href="https://about.google/">About</a>
+                <a href="https://google.com/search/howsearchworks">How Search works</a>
+            </div>
+            <div>
+                <a href="https://policies.google.com/privacy">Privacy</a>
+                <a href="https://policies.google.com/terms">Terms</a>
+            </div>
+        </div>
+    </footer>
+    <!-- END TAMBAHAN -->
+</body>
+</html>
